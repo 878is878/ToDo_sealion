@@ -46,6 +46,7 @@ SNSでの告知
 
 ### ■ 機能の実装方針予定
 - ベース : Ruby3系, Ruby on Rails7系
+- イラスト : 自筆
 - CSS : bulma
 - 通知機能 ： LINE通知,ActionCable
 - 画像関連 : Rmagick
