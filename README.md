@@ -53,7 +53,7 @@ SNSでの告知
 - その他 : ActiveJob
 
 ### 画面遷移図
-Figma: https://www.figma.com/design/gLNyfcEhIpuMYfyr3gQJ9w/WithToDo%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&t=YpODiirdteXdp4ct-1
+Figma :  https://www.figma.com/design/gLNyfcEhIpuMYfyr3gQJ9w/WithToDo%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&t=YpODiirdteXdp4ct-1
 
 ### チェックリスト
 - [x] ユーザー登録・ログイン機能
@@ -72,3 +72,7 @@ Figma: https://www.figma.com/design/gLNyfcEhIpuMYfyr3gQJ9w/WithToDo%E7%94%BB%E9%
 直接変更できるものではなく、一旦メールなどを介して専用のページで変更する画面遷移になっているか？
 - [x] メールアドレス
 - [x] パスワード
+
+### ER図
+![WithToDoER図](https://i.gyazo.com/d4e65423d4ed57b1b942061a6b8e1ed1.png)
+gyazo → https://gyazo.com/d4e65423d4ed57b1b942061a6b8e1ed1
