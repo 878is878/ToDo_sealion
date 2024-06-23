@@ -76,5 +76,5 @@ Figma :  https://www.figma.com/design/gLNyfcEhIpuMYfyr3gQJ9w/WithToDo%E7%94%BB%E
 - [x] パスワード
 
 ### ER図
-![WithToDoER図](https://i.gyazo.com/d4e65423d4ed57b1b942061a6b8e1ed1.png)
-gyazo → https://gyazo.com/d4e65423d4ed57b1b942061a6b8e1ed1
+![WithToDoER図](https://i.gyazo.com/7ee159d34b2849debb6e2b4392f9a3d7.png)
+gyazo → https://gyazo.com/7ee159d34b2849debb6e2b4392f9a3d7
