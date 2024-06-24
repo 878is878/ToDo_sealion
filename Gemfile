@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'mysql2'
+gem 'sorcery'
+gem 'carrierwave', '~> 3.0', '>= 3.0.7'
