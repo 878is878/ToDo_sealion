@@ -75,3 +75,5 @@ gem 'mysql2'
 gem 'sorcery'
 gem 'carrierwave', '~> 3.0', '>= 3.0.7'
 gem "dockerfile-rails", ">= 1.6", :group => :development
+gem 'bootstrap', '~> 5.2.0'
+gem 'animate-css-rails'
