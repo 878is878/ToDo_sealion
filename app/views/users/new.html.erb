@@ -1,4 +1,3 @@
-#サインアップ
 <div class='container mt-5 d-flex justify-content-center align-items-center'>
   <div class='row'>
     <div class='col'>
@@ -7,7 +6,7 @@
           サインアップ
         </div>
         <div class='card-body'>
-          <%= form_with model: @signup_form, url: signup_path do |f|%>
+          <%= form_with model: @signup_form, url: users_path, scope: :signup_form do |f|%>
             <div class='mb-3'>
               <%= f.label :name, t('activemodel.attributes.signup_form.name') %>
               <%= f.text_field :name, class: 'form-control' %>

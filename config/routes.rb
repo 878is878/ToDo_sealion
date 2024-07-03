@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
 
-  get 'signup', to: 'user_sessions#new' # これと
-  post 'signup', to: 'user_sessions#create'
+  get 'signin', to: 'user_sessions#new'
+  post 'signin', to: 'user_sessions#create'
 
   root 'top#top'
 end

@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
-
+  has_one :profile, dependent: :destroy
   delegate :name, to: :profile
 
   # password；最小で3文字以上必要（新規レコード作成もしくはcrypted_passwordカラムが更新される時のみ適応）

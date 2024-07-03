@@ -1,7 +1,12 @@
-<div class='continer h-full'>
+<% if current_user.nil? %>
+  <div class='mt-3'>誰もいないよ</div>
+<% else %>
+  <div class='mt-3'> <%= "#{current_user.name}がログイン中"%> </div>
+<% end %>
+<div class='continer h-full bg-white'>
   <div class='container text-center mt-5 h-50'>
       <div class='row'>
-        <div class='col'>
+        <div class='col mt-3'>
           トドと一緒に習慣化
         </div>
     </div>
@@ -13,7 +18,7 @@
     <div class='row'>
       <div class='container text-center mt-3'>
         <%= link_to 'サインアップ', new_user_path, class:'btn btn-primary'%>
-        <%= link_to 'サインイン', '#', class:'btn btn-primary'%>
+        <%= link_to 'サインイン', signin_path, class:'btn btn-primary'%>
       </div>
     </div>
   </div>
