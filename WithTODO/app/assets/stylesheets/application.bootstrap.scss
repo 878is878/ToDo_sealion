@@ -1,0 +1,29 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+@font-face {
+  font-family: 'mitimasu';
+  src: asset_url('mitimasu.ttf');
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  font-family: 'mitimasu';
+  height: 100%;
+  background-color: #2b81d2;
+}
+
+.h-full{
+  height: 100%;
+}
+
+.h-50vh{
+  height: 50vh;
+}
+
+.bg-soft{
+  background-color: #E4F2FF;
+}
