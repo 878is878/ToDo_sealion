@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :users, only: %i[new create]
+  resources :tasks, only: %i[index]
 
   get 'signin', to: 'user_sessions#new'
   post 'signin', to: 'user_sessions#create'

@@ -9,7 +9,7 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_to root_path # あとでタスクトップ画面に変える
+      redirect_to tasks_path
     else
       render :new
     end

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @skip_header_footer = true
     @user = SignupForm.new(signup_params)
     if @user.save
-      redirect_to root_path #あとで変える
+      redirect_to tasks_path #あとで変える
     else
       render :new
     end

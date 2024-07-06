@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
@@ -17,7 +18,7 @@
     <%= yield %>
 
     <% unless @skip_header_footer %>
-      ふったー
+      <%= render 'shared/footer'%>
     <% end %>
 
   </body>
