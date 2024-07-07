@@ -5,4 +5,6 @@ class TopController < ApplicationController
     @skip_header_footer = true
   end
   
+  def setting; end
+
 end

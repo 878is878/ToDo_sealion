@@ -1,6 +1,22 @@
-<div class='container-fluid d-flex fixed-bottom'>
-  <i class="bi bi-clipboard-check"></i>
-  <i class="bi bi-emoji-smile"></i>
-  <i class="bi bi-cloud-haze"></i>
-  <i class="bi bi-wrench"></i>
+<div class='container-fluid d-flex fixed-bottom text-center text-white bg-todo'>
+  <div class='container'>
+    <%= link_to tasks_path, class:'text-white' do %>
+      <i class="bi bi-clipboard-check"  style="font-size: 3rem;"></i>
+    <% end %>
+  </div>
+  <div class='container'>
+    <%= link_to todos_path, class:'text-white' do %>
+      <i class="bi bi-emoji-smile" style="font-size: 3rem;"></i>
+    <% end %>
+  </div>
+  <div class='container'>
+    <%= link_to port_path, class:'text-white' do %>
+      <i class="bi bi-cloud-haze"  style="font-size: 3rem;"></i>
+    <% end %>
+  </div>
+  <div class='container'>
+    <%= link_to setting_path, class:'text-white' do %>
+      <i class="bi bi-wrench"  style="font-size: 3rem;"></i>
+    <% end %>
+  </div>
 </div>
