@@ -9,6 +9,7 @@
       <% end %>
     </div>
     <div class='col text-end'>
+      <%= link_to '使い方', tutorial_path, class: 'btn btn-light'%>
       <%= link_to 'サインアウト', signout_path, data: {turbo_method: :delete, turbo_confirm: 'サインアウトする？' }, class: 'btn btn-light' %>
     </div>
   </div>

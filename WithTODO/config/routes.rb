@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :tasks
   resource :todos
 
+  get 'tutorial', to: 'top#tutorial'
   get 'port', to: 'todos#index'
   get 'setting', to: 'top#setting'
   get 'signin', to: 'user_sessions#new'

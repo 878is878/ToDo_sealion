@@ -1,0 +1,2 @@
+class Todotalk < ApplicationRecord
+end

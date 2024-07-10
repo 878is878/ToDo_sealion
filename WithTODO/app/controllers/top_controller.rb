@@ -7,4 +7,7 @@ class TopController < ApplicationController
   
   def setting; end
 
+  def tutorial; end
+
+
 end

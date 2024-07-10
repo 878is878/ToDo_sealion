@@ -1,1 +1,30 @@
-トドの詳細画面
+<div class='container-fulid bg-sky h-50vh text-center bg-img'>
+  <div class='container d-flex justify-content-center h-100', style='width:600px;'>
+    <div class='row '>
+      <div class='col-5'>
+          <div class="card mt-5">
+            <div class="card-header ">
+              とどじろー <%= link_to '#', class:'text-dark' do %><i class="bi bi-pencil"></i><% end %>
+            </div>
+          </div>
+      </div>
+      <div class='col-7 align-self-end'>
+        <%= image_tag 'TODO.png', size:'500x500', class:'img-fluid' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='container-fluid'>
+  <div class='container mt-3'>
+    満腹度メーター  友好度メーター
+  </div>
+  <div class='container mb-5 pb-5 d-flex flex-wrap'>
+    <% 6.times do %>
+      <%= render 'food' %>
+    <% end %>
+  </div>
+  <div class='container text-center'>
+    <%= link_to '旅に送り出す', '#', class: 'btn btn-danger'%>
+  </div>
+ </div>
