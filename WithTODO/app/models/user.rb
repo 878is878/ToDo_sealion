@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :todos, dependent: :destroy
   delegate :name, to: :profile
 
+  after_create :set_todo_and_tasklist
+
   # password；最小で3文字以上必要（新規レコード作成もしくはcrypted_passwordカラムが更新される時のみ適応）
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
 
@@ -16,4 +18,13 @@ class User < ApplicationRecord
   
   # email：値が空でないこと・ユニークな値であること
   validates :email, presence: true, uniqueness: true
+
+  private
+
+  def set_todo_and_tasklist
+      todo = todos.create!(name:'名もなきトド')
+      Tasklist.create!(user_id: self.id, todo_id: todo.id)
+  end
+
+
 end

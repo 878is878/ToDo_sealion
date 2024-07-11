@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_10_042557) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_11_123543) do
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "food_name", null: false
@@ -55,6 +55,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_042557) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "todo_id"
+    t.index ["todo_id"], name: "index_tasklists_on_todo_id"
     t.index ["user_id"], name: "index_tasklists_on_user_id"
   end
 
@@ -84,11 +86,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_042557) do
 
   create_table "todos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "friendship"
-    t.integer "hungry"
+    t.integer "friendship", default: 0
+    t.integer "hungry", default: 0
     t.boolean "depart"
     t.bigint "user_id", null: false
-    t.integer "tasklist"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_todos_on_user_id"
@@ -116,6 +117,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_042557) do
   add_foreign_key "inventories", "categories"
   add_foreign_key "inventories", "users"
   add_foreign_key "profiles", "users"
+  add_foreign_key "tasklists", "todos"
   add_foreign_key "tasklists", "users"
   add_foreign_key "tasks", "categories"
   add_foreign_key "tasks", "tasklists"
