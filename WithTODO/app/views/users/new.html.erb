@@ -6,7 +6,8 @@
           サインアップ
         </div>
         <div class='card-body'>
-          <%= form_with model: @signup_form, scope: :signup_form,url: users_path do |f|%>
+          <%= form_with model: @user, scope: :signup_form, url: users_path, data: { turbo: false } do |f|%>
+            <%= render 'shared/error', object: f.object %>
             <div class='mb-3'>
               <%= f.label :name, t('signup_form.name')%>
               <%= f.text_field :name, class: 'form-control' %>

@@ -6,12 +6,14 @@ class UserSessionsController < ApplicationController
   end
 
   def create
+    @skip_header_footer = true
     @user = login(params[:email], params[:password])
-
     if @user
+      flash[:success] ='ログインに成功しました'
       redirect_to tasks_path
     else
-      render :new
+      flash.now[:danger] = 'ログインに失敗しました'
+      render :new, status: :unprocessable_entity
     end
   end
 

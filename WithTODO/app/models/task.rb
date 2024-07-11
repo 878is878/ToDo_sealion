@@ -1,9 +1,9 @@
 class Task < ApplicationRecord
   belongs_to :tasklist
   belongs_to :category
-  has_one :taskschesule, dependent: :destroy
+  has_one :taskschedule, dependent: :destroy
 
-  varidates :name, presence: true
+  validates :name, presence: true
   validates :category, presence: true
   validates :open, presence: true
   

@@ -17,7 +17,7 @@ services:
     #buildの"."はカレント(.)にあるDockerfileを参照してbuildしろということ
     build: .
     #rails7ではrails sではなく.bin/devでwebサーバーを起動させる(development)
-    command: bash -c "rm -f tmp/pids/server.pid && ./bin/dev"
+    #command: bash -c "rm -f tmp/pids/server.pid && ./bin/dev"
     volumes:
       - type: bind
         source: ./WithTODO

@@ -6,7 +6,7 @@
           サインイン
         </div>
         <div class='card-body'>
-          <%= form_with url: signin_path do |f|%>
+          <%= form_with url: signin_path, data: { turbo: false } do |f|%>
             <div class='mb-3'>
               <%= f.label :email, t('signup_form.email')%>
               <%= f.email_field :email, class: 'form-control' %>
