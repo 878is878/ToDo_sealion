@@ -1,0 +1,33 @@
+<div class='container-fulid bg-sky h-50vh text-center bg-img'>
+  <div class='container d-flex justify-content-center h-100', style='width:600px;'>
+    <div class='row '>
+      <div class='col-5'>
+          <div class="card mt-5">
+            <div class="card-header ">
+              とどじろー
+            </div>
+            <div class="card-body">
+              <p class="card-text">フロントできなくて詰んだ</p>
+            </div>
+          </div>
+      </div>
+      <div class='col-7 align-self-end'>
+        <%= image_tag 'TODO.png', size:'500x500', class:'img-fluid' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='container-fluid'>
+  <div class='container mt-3'>
+    タスク一覧
+    <div class='text-end mb-3'><%= link_to 'タスク追加', new_task_path, class:'btn btn-light' %></div>
+  </div>
+  <div class='container mb-5 pb-5'>
+    <% 8.times do %>
+      <%= render 'task'%>
+    <% end %>
+  </div>
+ </div>
+
+
