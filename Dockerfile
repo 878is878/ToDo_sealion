@@ -10,4 +10,4 @@ WORKDIR $APP
 COPY Gemfile $APP/Gemfile
 COPY Gemfile.lock $APP/Gemfile.lock
 RUN bundle install
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["rails", "server", "-p", "3000", "-b", "0.0.0.0"]
