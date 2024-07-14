@@ -7,16 +7,6 @@ services:
     dockerfilePath: Dockerfile
     buildCommand: bundle install && yarn install
     startCommand: bash -c "rm -f tmp/pids/server.pid && ./bin/dev"
-    mounts:
-      - type: volume
-        source: gemdata
-        target: /usr/local/bundle
-      - type: volume
-        source: node_modules
-        target: /WithTODO/node_modules
-      - type: volume
-        source: ./WithTODO
-        target: /WithTODO
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -25,18 +15,3 @@ services:
         value: password
       - key: TZ
         value: "Asia/Tokyo"
-    databases:
-      - name: my-database
-        engine: mysql
-        version: 8.0
-        initialDiskSizeGB: 10
-        replicas: 1
-        envVars:
-          - key: MYSQL_ROOT_PASSWORD
-            value: password
-          - key: TZ
-            value: "Asia/Tokyo"
-          - key: MYSQL_USER
-            value: root
-          - key: MYSQL_PASSWORD
-            value: password
