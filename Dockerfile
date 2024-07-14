@@ -10,4 +10,3 @@ WORKDIR $APP
 COPY Gemfile $APP/Gemfile
 COPY Gemfile.lock $APP/Gemfile.lock
 RUN bundle install
-CMD ["bash", "-c", "rm -f tmp/pids/server.pid && ./bin/dev"]
